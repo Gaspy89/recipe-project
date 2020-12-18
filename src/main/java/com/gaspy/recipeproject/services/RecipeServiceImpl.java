@@ -5,6 +5,7 @@ import com.gaspy.recipeproject.repositories.RecipeRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -18,8 +19,10 @@ public class RecipeServiceImpl implements RecipeService{
         this.recipeRepository = recipeRepository;
     }
 
-    public List<Recipe> getRecipes() {
+    public Set<Recipe> getRecipes() {
         log.debug(" I am in the service");
-        return (List)recipeRepository.findAll();
+        Set<Recipe> recipes = new HashSet<>();
+        recipeRepository.findAll().forEach(recipes::add);
+        return recipes;
     }
 }

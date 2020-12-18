@@ -2,8 +2,8 @@ package com.gaspy.recipeproject.services;
 
 import com.gaspy.recipeproject.model.Recipe;
 
-import java.util.List;
+import java.util.Set;
 
 public interface RecipeService {
-    public List<Recipe> getRecipes();
+    public Set<Recipe> getRecipes();
 }
