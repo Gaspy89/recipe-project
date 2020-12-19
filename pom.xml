@@ -54,6 +54,11 @@
 			<optional>true</optional>
 			<version>1.18.16</version>
 		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
